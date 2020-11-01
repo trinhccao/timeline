@@ -74,27 +74,25 @@ ul, ol {
   background-image: linear-gradient(to bottom right, #7c17f7, #933ff9);
   border-radius: 3px;
   opacity: 0;
-  transition: margin 0.2s linear, visibility 0.2s linear, opacity 0.2s linear;
-  transition-delay: 0.3s;
+  transition: margin 0.2s linear, visibility 0.2s, opacity 0.2s linear;
+  transition-delay: 0.5s;
 }
 
 .timeline__desc:before {
   content: " ";
-  visibility: hidden;
   position: absolute;
-  top: 5px;
+  top: 4px;
   right: 100%;
-  margin-top: -1px;
   width: 0;
   height: 2px;
   background-color: #7c17f7;
   transition: width 0.1s linear;
-  transition-delay: 0.6s;
+  transition-delay: 0.3s;
 }
 
-.timeline__item:hover .timeline__desc,
-.timeline__item:hover .timeline__desc:before {
+.timeline__item:hover .timeline__desc {
   visibility: visible;
+  transition-delay: 0.3s;
 }
 
 .timeline__item:hover .timeline__desc {
@@ -104,4 +102,5 @@ ul, ol {
 
 .timeline__item:hover .timeline__desc:before {
   width: 25px;
+  transition-delay: 0.6s;
 }
